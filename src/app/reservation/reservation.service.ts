@@ -56,8 +56,7 @@ export class ReservationService {
   constructor(private http: HttpClient) {}
 
   getReservations(): Observable<Reservation[]> {
-    // return this.reservations;
-    return this.http.get<Reservation[]>(this.apiUrl + '/reservations');
+    return this.http.get<Reservation[]>(this.apiUrl + '/reservation');
   }
 
   getReservation(id: string): Reservation | undefined {
